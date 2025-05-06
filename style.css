@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="cabecalho" data-key="cabecalho">
+        <h1></h1>
+        <h3></h3>
+    </section>
+
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html"
+                            data-key="nav_inicio">
+                            <span></span> |
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="energia.html" data-key="nav_energia">
+                            <span></span> |
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="agua.html" data-key="nav_agua">
+                            <span></span> |
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="producao.html" data-key="nav_producao">
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col ">
+                <div>
+                    <h2 data-key="secao1_titulo"></h2>
+                    <p class="alinha" data-key="secao1_texto"></p>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div>
+                    <img class="img-agro br-3" src="" alt="Imagem representativa de plantação."
+                        data-key="secao1_imagem">
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <h3 class="text-center pb-3" data-key="secao2_titulo"></h3>
+            <div class="col">
+                <div class="card" style="width: 18rem;" data-key="card1">
+                    <img src="" class="img-card card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="card1_titulo"></h5>
+                        <p class="card-text" data-key="card1_texto"></p>
+                        <a href="#" class="btn btn-primary" data-key="card1_botao"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;" data-key="card2">
+                    <img src="" class="img-card card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="card2_titulo"></h5>
+                        <p class="card-text" data-key="card2_texto"></p>
+                        <a href="#" class="btn btn-primary" data-key="card2_botao"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;" data-key="card3">
+                    <img src="" class="img-card card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="card3_titulo"></h5>
+                        <p class="card-text" data-key="card3_texto"></p>
+                        <a href="#" class="btn btn-primary" data-key="card3_botao"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="carouselExample" class="carousel slide pt-4 pb-3">
+            <div class="carousel-inner" data-key="carousel">
+                <div class="carousel-item active" data-key="carousel_item1">
+                    <img src="" class="img-slide d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-key="carousel_item2">
+                    <img src="" class=" img-slide d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="footer " data-key="footer_texto">
+        <p></p>
+    </div>
+
+    <script>
+        const conteudo = {
+            cabecalho: {
+                titulo: "AGRINHO 2025",
+                subtitulo: "Festejando Conexão Campo Cidade"
+            },
+            nav_inicio: "Página Inicial",
+            nav_energia: "Energia Rural",
+            nav_agua: "Acessibilidade a Água",
+            nav_producao: "Produção",
+            secao
