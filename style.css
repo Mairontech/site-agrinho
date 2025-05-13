@@ -1,135 +1,336 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Estilos gerais */
+body {
+    font-family: 'Nunito Sans', sans-serif; /* Fonte moderna e amigável */
+    color: #333;
+    background-color: #f4fcf7; /* Verde bem claro e suave */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-<body>
-    <section class="cabecalho" data-key="cabecalho">
-        <h1></h1>
-        <h3></h3>
-    </section>
+/* Cabeçalho */
+.cabecalho {
+    background-color: #e8f5e9; /* Verde claro */
+    padding: 4rem 0;
+    text-align: center;
+    background-image: url('./assets/gifs/campo_animado.gif'); /* GIF sutil de paisagem rural */
+    background-size: cover;
+    background-position: center bottom;
+    color: #1b5e20; /* Verde escuro para o texto do cabeçalho */
+    position: relative;
+    z-index: 1;
+}
 
-    <nav class="navbar navbar-expand-lg bg-success">
-        <div class="container-fluid ">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="index.html"
-                            data-key="nav_inicio">
-                            <span></span> |
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="energia.html" data-key="nav_energia">
-                            <span></span> |
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="agua.html" data-key="nav_agua">
-                            <span></span> |
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="producao.html" data-key="nav_producao">
-                            <span></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+.cabecalho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 245, 233, 0.8); /* Sobreposição semitransparente para melhor legibilidade */
+    z-index: -1;
+}
 
-    <div class="container">
-        <div class="row pt-5">
-            <div class="col ">
-                <div>
-                    <h2 data-key="secao1_titulo"></h2>
-                    <p class="alinha" data-key="secao1_texto"></p>
-                </div>
-            </div>
-            <div class="col text-center">
-                <div>
-                    <img class="img-agro br-3" src="" alt="Imagem representativa de plantação."
-                        data-key="secao1_imagem">
-                </div>
-            </div>
-        </div>
-        <div class="row pt-5">
-            <h3 class="text-center pb-3" data-key="secao2_titulo"></h3>
-            <div class="col">
-                <div class="card" style="width: 18rem;" data-key="card1">
-                    <img src="" class="img-card card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" data-key="card1_titulo"></h5>
-                        <p class="card-text" data-key="card1_texto"></p>
-                        <a href="#" class="btn btn-primary" data-key="card1_botao"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;" data-key="card2">
-                    <img src="" class="img-card card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" data-key="card2_titulo"></h5>
-                        <p class="card-text" data-key="card2_texto"></p>
-                        <a href="#" class="btn btn-primary" data-key="card2_botao"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;" data-key="card3">
-                    <img src="" class="img-card card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" data-key="card3_titulo"></h5>
-                        <p class="card-text" data-key="card3_texto"></p>
-                        <a href="#" class="btn btn-primary" data-key="card3_botao"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+.cabecalho h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
-        <div id="carouselExample" class="carousel slide pt-4 pb-3">
-            <div class="carousel-inner" data-key="carousel">
-                <div class="carousel-item active" data-key="carousel_item1">
-                    <img src="" class="img-slide d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-key="carousel_item2">
-                    <img src="" class=" img-slide d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <div class="footer " data-key="footer_texto">
-        <p></p>
-    </div>
+.cabecalho .lead {
+    font-size: 1.25rem;
+    color: #388e3c; /* Verde um pouco mais forte */
+    font-style: italic;
+    margin-bottom: 1rem;
+}
 
-    <script>
-        const conteudo = {
-            cabecalho: {
-                titulo: "AGRINHO 2025",
-                subtitulo: "Festejando Conexão Campo Cidade"
-            },
-            nav_inicio: "Página Inicial",
-            nav_energia: "Energia Rural",
-            nav_agua: "Acessibilidade a Água",
-            nav_producao: "Produção",
-            secao
+/* Navegação */
+.navbar {
+    background-color: #4caf50 !important; /* Verde principal */
+    padding: 0.8rem 0;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #f0f4c3; /* Amarelo claro para os links */
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fffde7 !important; /* Amarelo mais claro no hover */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff !important; /* Branco para o link ativo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(240, 244, 195, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 3rem 0;
+}
+
+.row.align-items-center {
+    margin-bottom: 4rem;
+}
+
+article h2 {
+    color: #2e7d32; /* Verde escuro para títulos de seção */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+article .lead {
+    color: #43a047; /* Verde mais claro para o texto de destaque */
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+figure img:hover {
+    transform: scale(1.03);
+}
+
+figure figcaption {
+    color: #757575;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Seção de Temas */
+.py-5.text-center h2 {
+    font-size: 2.5rem;
+    color: #1b5e20;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.py-5.text-center .lead {
+    color: #388e3c;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-title {
+    color: #2e7d32;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #558b2f;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-success {
+    background-color: #64dd17; /* Verde mais claro e vibrante */
+    border-color: #64dd17;
+    color: #1b5e20;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: #4caf50; /* Verde principal no hover */
+    border-color: #4caf50;
+}
+
+/* Carrossel */
+.carousel {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    border-radius: 0.75rem;
+}
+
+.carousel-item img.img-slide {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    color: #f0f4c3;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+    color: #e6ee9c;
+    font-size: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: none;
+    border: none;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 0.9;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #e8f5e9; /* Verde claro */
+    padding: 2.5rem 0;
+    text-align: center;
+    color: #388e3c;
+    border-top: 1px solid #c8e6c9;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 992px) {
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .py-5.text-center h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-item img.img-slide {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 3rem 0;
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-dark .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-item img.img-slide {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cabecalho {
+        padding: 2rem 0;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.75rem;
+    }
+
+    .py-5.text-center h2 {
+        font-size: 1.75rem;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    .carousel-caption {
+        padding: 0.5rem;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
